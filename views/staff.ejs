@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="StyleSheet" href="/CSS/admin.css">
+</head>
+<body style="text-align: center;">
+  <h1 class="form_title">Staff Members Details</h1>
+
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Join Date</th>
+      <th>Gender</th>
+    </tr>
+    <% for (const doc of documents) { %>
+      <tr>
+        <td><%= doc.ID %></td>
+        <td><%= doc.First_Name %></td>
+        <td><%= doc.Last_Name %></td>
+        <td><%= doc.Email %></td>
+        <td><%= doc.Password %></td>
+        <td><%= doc.Join_Date %></td>
+        <td><%= doc.Gender %></td>
+      </tr>
+    <% } %>
+  </table>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <title>UNI-LIB Books</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="StyleSheet" href="/CSS/admin.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+</head>
+
+<body>
+   
+    <ul class="nav" id="home">
+        <li><a class="home" href="#" id="goBackLink"><button class="btn" data-target="#home">Home</button></a></li>   
+        <li class="right"><a href="index.html">LOG OUT</a></li>
+      </ul>
+
+    <div class="header">
+        <h1>Welcome to UNI-LIB Book Search</h1>
+        <p> - Explore whole world by just one click - </p>
+       
+      </div> 
+      
+      <div class="container">
+
+        <div class="left-panel">
+
+            <h2>UNI-LIB Book Search</h2>
+<br>
+            <p style="text-align: left;"><b>Welcome to the UNI-LIB</b> Books Search Section, your gateway to a world of literary exploration. 
+                <br><br>With our user-friendly search tools, finding your next literary adventure is effortless. 
+                <br><br>Whether you're seeking a specific title, author, genre, or simply craving a new reading experience, our comprehensive database is at your service. 
+                <br><br>Uncover hidden gems, dive into classics, and embark on journeys of discovery—all with a few clicks. 
+                <br><br>Let the pages of our virtual library unfold before you, as you embark on a quest to find the perfect book that will transport you to uncharted realms of imagination and knowledge.
+
+            </p>
+
+
+        </div>
+
+        <div class="main-content">
+<!----------------------------------------------------main -->
+
+
+
+<h1 class="form_title"><b>Search Books</b></h1>
+
+<form action="http://localhost:8080/req_book" method="post" id="searchForm">
+    <table>
+
+<tr>
+    <td><label for="id">Book Name:</label></td>
+    <td><input type="text" name="bookname" placeholder="Harry Potter"></td>
+</tr>
+
+<tr>
+    <td><label for="type">Book type:</label></td>
+    <td>
+        <select name="btype">
+            <option value="history_books">History and Cultural Books</option>
+            <option value="science_books">Science and Nature Books</option>
+            <option value="art_books">Art and Photography Books</option>
+            <option value="tech_books">Technology books</option>
+            <option value="math_books">Mathematics books</option>
+            <option value="commerce_books">Commerce books</option>
+            <option value="other_books">Other</option>
+        </select>
+    </td>
+</tr>
+
+
+
+<tr>
+    <td></td>
+    <td><input type="submit" value="FIND"></td>
+</tr>
+
+</table>
+</form>
+
+<br><br><br>
+<div class="section">
+    <div id="search_results">Put The Book ID in the comment box and we will set your order</div>
+  </div>
+
+
+
+</div>
+</div>
+
+
+
+<div class="footer">
+    <div class="footer-content">
+      <div class="footer-logo"><b>UNI-LIB</b> </div>
+      <div class="footer-text">
+
+
+        <p class="footerparts">Contact: <a href="#">1234567890</a></p>
+        <p class="footerparts">Email: <a href="#">TestEmail@gmail.com</a></p>
+        <p class="footerparts">Fax: <a href="#">TestEmail@gmail.com</a></p>
+        <p class="footerparts">Address: <a href="#">abc123</a></p>
+      
+
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fa fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/LandJS.js"> </script>
+
+
+</body>
+</html>

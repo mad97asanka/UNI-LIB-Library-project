@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="StyleSheet" href="/CSS/admin.css">
+</head>
+<body style="text-align: center;">
+  <h1 class="form_title" id="sec1">History and Cultural Books</h1>
+
+  <div class="card-container">
+    <% for (const doc of documents) { %>
+      <div class="card">
+        <img class="cover-image" src="<%= doc.Book_Cover %>" alt="Cover Image">
+
+        <h3 style="font-size: 15px;">Book Name: <%= doc.Book_Name %> </h3>
+        <h4 style="font-size: 14px;">Book Author : <%= doc.Book_Authors %> </h4>
+        <h5 style="font-size: 12px;">Book ID: <%= doc.Book_ID %> </h5>
+      </div>
+      <% } %>
+  </div>
+
+<br><br>
+  <h1 class="form_title" id="sec2">Science and Nature Books</h1>
+
+  <div class="card-container">
+    <% for (const doc of documents2) { %>
+      <div class="card">
+        <img class="cover-image" src="<%= doc.Book_Cover %>" alt="Cover Image">
+
+        <h3 style="font-size: 15px;">Book Name: <%= doc.Book_Name %> </h3>
+        <h4 style="font-size: 14px;">Book Author : <%= doc.Book_Authors %> </h4>
+        <h5 style="font-size: 12px;">Book ID: <%= doc.Book_ID %> </h5>
+      </div>
+      <% } %>
+  </div>
+
+
+  <br><br>
+  <h1 class="form_title" id="sec3">Art and Photography Books</h1>
+
+  <div class="card-container">
+    <% for (const doc of documents3) { %>
+      <div class="card">
+        <img class="cover-image" src="<%= doc.Book_Cover %>" alt="Cover Image">
+
+        <h3 style="font-size: 15px;">Book Name: <%= doc.Book_Name %> </h3>
+        <h4 style="font-size: 14px;">Book Author : <%= doc.Book_Authors %> </h4>
+        <h5 style="font-size: 12px;">Book ID: <%= doc.Book_ID %> </h5>
+      </div>
+      <% } %>
+  </div>
+
+  <br><br>
+  <h1 class="form_title" id="sec4">Technology books</h1>
+
+  <div class="card-container">
+    <% for (const doc of documents4) { %>
+      <div class="card">
+        <img class="cover-image" src="<%= doc.Book_Cover %>" alt="Cover Image">
+
+        <h3 style="font-size: 15px;">Book Name: <%= doc.Book_Name %> </h3>
+        <h4 style="font-size: 14px;">Book Author : <%= doc.Book_Authors %> </h4>
+        <h5 style="font-size: 12px;">Book ID: <%= doc.Book_ID %> </h5>
+      </div>
+      <% } %>
+  </div>
+
+
+  <br><br>
+  <h1 class="form_title" id="sec5">Mathematics books</h1>
+
+  <div class="card-container">
+    <% for (const doc of documents5) { %>
+      <div class="card">
+        <img class="cover-image" src="<%= doc.Book_Cover %>" alt="Cover Image">
+
+        <h3 style="font-size: 15px;">Book Name: <%= doc.Book_Name %> </h3>
+        <h4 style="font-size: 14px;">Book Author : <%= doc.Book_Authors %> </h4>
+        <h5 style="font-size: 12px;">Book ID: <%= doc.Book_ID %> </h5>
+      </div>
+      <% } %>
+  </div>
+
+
+  <br><br>
+  <h1 class="form_title" id="sec6">Commerce books</h1>
+
+  <div class="card-container">
+    <% for (const doc of documents6) { %>
+      <div class="card">
+        <img class="cover-image" src="<%= doc.Book_Cover %>" alt="Cover Image">
+
+        <h3 style="font-size: 15px;">Book Name: <%= doc.Book_Name %> </h3>
+        <h4 style="font-size: 14px;">Book Author : <%= doc.Book_Authors %> </h4>
+        <h5 style="font-size: 12px;">Book ID: <%= doc.Book_ID %> </h5>
+      </div>
+      <% } %>
+  </div>
+
+
+  <br><br>
+  <h1 class="form_title" id="sec7">Other Books</h1>
+
+  <div class="card-container">
+    <% for (const doc of documents7) { %>
+      <div class="card">
+        <img class="cover-image" src="<%= doc.Book_Cover %>" alt="Cover Image">
+
+        <h3 style="font-size: 15px;">Book Name: <%= doc.Book_Name %> </h3>
+        <h4 style="font-size: 14px; ">Book Author : <%= doc.Book_Authors %> </h4>
+        <h5 style="font-size: 12px;">Book ID: <%= doc.Book_ID %> </h5>
+      </div>
+      <% } %>
+  </div>
+ 
+</body>
+</html>

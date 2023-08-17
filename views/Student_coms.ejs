@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="StyleSheet" href="/CSS/admin.css">
+</head>
+<body style="text-align: center;">
+
+  <h1 class="form_title" id="sec1">Students Comments</h1>
+  <table>
+    <tr>
+      <th>Student ID</th>
+      <th>Comment</th>
+    
+    </tr>
+    <% for (const doc of documents) { %>
+      <tr>
+        
+        <td><%= doc.User_ID %></td>
+        <td><%= doc.Comment %></td>
+    
+      </tr> 
+
+      <% } %>
+  </table>
+</body>
+</html>

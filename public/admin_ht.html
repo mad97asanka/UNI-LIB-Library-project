@@ -1,0 +1,224 @@
+<html>
+
+<head>
+    <title>UNI-LIB Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="StyleSheet" href="/CSS/admin.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+</head>
+
+<body>
+   
+    <ul class="nav" id="home">
+        <li><a class="home"><button class="btn" data-target="#home">Home</button></a></li>
+        <li><a><button id="renderButton" class="btn" data-target="#section1">Admin</button></a></li>
+        <li><a><button id="renderButton_staff" class="btn" data-target="#section2">Staff</button></a></li>
+        <li><a><button class="btn" data-target="#section4">Account Delete</button></a></li>
+        <li><a><button id="renderButton_stu" class="btn" data-target="#section3">Student Deatils</button></a></li>
+        <li><a href="read_com.html"><button class="btn" >Student Comments</button></a></li>
+        
+        <li class="right"><a href="index.html">LOG OUT</a></li>
+      </ul>
+
+    <div class="header">
+        <h1>Welcome to UNI-LIB Admin Section</h1>
+        <p> - Explore whole world by just one click - </p>
+       
+      </div> 
+      
+      <div class="container">
+
+        <div class="left-panel">
+
+            <h2>UNI-LIB Admin Panel</h2>
+            <p>Admin Details</p>
+
+            <div id="adminLeftPanel"></div>
+            <br><br><br>
+            <p style="text-align: left;"><b>Welcome to the UNI-LIB</b> Admin Dashboard, your command center for orchestrating the intricate symphony of our digital library. 
+                <br><br>Designed with precision and simplicity in mind, this dashboard empowers you to effortlessly manage the vast realm of literary resources we offer. 
+                <br><br>From curating collections to tracking user interactions, from fine-tuning search algorithms to analyzing trends, every tool you need to sculpt an unparalleled user experience is at your fingertips. 
+                <br><br>As you navigate through the interface, remember that you hold the key to fostering knowledge, connecting readers, and nurturing a community bound by a shared love for learning. 
+                <br><br>Your journey as a steward of this virtual haven begins here, and we're here to support your every endeavor.
+            </p>
+
+
+        </div>
+
+        <div class="main-content">
+<!-----------------------------------------------------Reconfigure admin-->
+
+<h1 class="form_title" id="section1"><b>Reconfigure Admin</b></h1>
+
+      <form action="http://localhost:8080/update_admin" method="post">
+        <table>
+
+            <tr>
+                <td><label for="fname">User ID:</label></td>
+                <td><input type="text" name="id" placeholder="Ex: 1xxx"></td>
+            </tr>
+
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" name="fname" placeholder="First Name..."></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input type="text" name="lname" placeholder="Last Name..."></td>
+            </tr>
+            <tr>
+                <td><label for="id">Email:</label></td>
+                <td><input type="text" name="mail" placeholder="Example@gmail.com"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">New Password:</label></td>
+                <td><input type="password" name="pass1" placeholder="New password"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Confirm password:</label></td>
+                <td><input type="password" name="pass2" placeholder="Confirm Password"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="UPDATE" class="submit_btn"></td>
+            </tr>
+        </table>
+    </form>
+    <div class="section">
+        <div id="ejsContainer">Click on Admin to see more...</div>
+      </div>
+
+    <br>
+    <ul></ul>
+    <br>
+
+  <!-------------------------------------------------------staff join form--->  
+
+      <h1 class="form_title" id="section2"><b>Recruiting Staff Member</b></h1>
+
+      <form action="http://localhost:8080/staff_regi" method="post">
+        <table>
+
+            <tr>
+                <td><label for="id">ID:</label></td>
+                <td><input type="text" name="id" placeholder="Ex: 2xxx"></td>
+            </tr>
+
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" name="fname" placeholder="First Name..."></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input type="text" name="lname" placeholder="Last Name..."></td>
+            </tr>
+
+            <tr>
+                <td><label for="id">Email:</label></td>
+                <td><input type="text" name="mail" placeholder="Example@gmail.com"></td>
+            </tr>
+           
+            <tr>
+                <td><label for="date">Join Date:</label></td>
+                <td><input type="date" name="jDate"></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <select name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="lname">New Password:</label></td>
+                <td><input type="password" name="pass1" placeholder="New password"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Confirm password:</label></td>
+                <td><input type="password" name="pass2" placeholder="Confirm Password"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="REGISTER"></td>
+            </tr>
+        </table>
+    </form>
+
+    <div class="section">
+        <div id="staff_display">Click on Staff to see more...</div>
+      </div>
+
+    <br><br>
+
+    <!----------------------------------------------------------delete staff member-->
+
+    <h1 class="form_title" id="section4"><b>Removing Accounts</b></h1>
+
+      <form action="http://localhost:8080/delete" method="post">
+        <table>
+            <tr>
+                <td><label for="id">Staff or Student ID:</label></td>
+                <td><input type="text" name="id" placeholder="2xxx , 3xxx"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="REMOVE"></td>
+            </tr>
+        </table>
+    </form>
+<br><br>
+
+
+
+</div>
+</div>
+
+
+    
+
+
+        
+      <div class="section" id="section3">
+        <div id="stu_display">Click on Studnet Deatils to see more...</div>
+      </div>
+        
+
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-logo"><b>UNI-LIB</b> </div>
+          <div class="footer-text">
+
+
+            <p class="footerparts">Contact: <a href="#">1234567890</a></p>
+            <p class="footerparts">Email: <a href="#">TestEmail@gmail.com</a></p>
+            <p class="footerparts">Fax: <a href="#">TestEmail@gmail.com</a></p>
+            <p class="footerparts">Address: <a href="#">abc123</a></p>
+          
+
+          </div>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+    
+    <script src="/js/script.js"></script>
+    <script src="/js/LandJS.js"> </script>
+
+</body>
+</html>

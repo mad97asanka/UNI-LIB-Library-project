@@ -1,0 +1,270 @@
+<html>
+
+<head>
+    <title>UNI-LIB Staff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="StyleSheet" href="/CSS/admin.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+</head>
+
+<body>
+   
+    <ul class="nav" id="home">
+        <li><a class="home"><button class="btn" data-target="#home">Home</button></a></li>
+        <li><a><button class="btn" data-target="#section1">Staff</button></a></li>
+        <li><a><button class="btn" data-target="#section2">Students</button></a></li>
+        <li><a><button class="btn" data-target="#section3">Books</button></a></li>
+        <li><a><button id="renderButton_stu" class="btn" data-target="#section4">Student Deatils</button></a></li>
+        <li><a href="s_books.html"><button class="btn" >Check All Books</button></a></li>
+        <li><a href="read_com.html"><button class="btn" >Student Comments</button></a></li>
+        
+        <li class="right"><a href="index.html">LOG OUT</a></li>
+      </ul>
+
+    <div class="header">
+        <h1>Welcome to UNI-LIB Staff Section</h1>
+        <p> - Explore whole world by just one click - </p>
+       
+      </div> 
+      
+      <div class="container">
+
+        <div class="left-panel">
+
+            <h2>UNI-LIB Staff Panel</h2>
+            <p>Account Details</p>
+
+            <div id="adminLeftPanel"></div>
+            <br><br><br>
+            <p style="text-align: left;"><b>Welcome to the UNI-LIB</b> Staff Dashboard, your gateway to orchestrating the seamless operation of our literary haven. 
+                <br><br>With intuitive features and comprehensive tools, this dashboard empowers our dedicated staff to curate, organize, and enhance the library experience for our cherished visitors. 
+                <br><br>From managing acquisitions to cataloging rare finds, from overseeing memberships to facilitating events, every aspect of our library's vitality is within your grasp. 
+                <br><br>As you navigate this interface, remember that you are the guardians of knowledge, the architects of inspiration, and the facilitators of endless discovery. 
+                <br><br>Your dedication drives the heart of UNI-LIB, and we stand by your side to ensure that each visitor's journey through our treasure trove of books is nothing short of extraordinary.
+            </p>
+
+
+        </div>
+
+        <div class="main-content">
+<!-----------------------------------------------------Reconfigure staff-->
+
+<h1 class="form_title" id="section1"><b>Reconfigure Staff</b></h1>
+
+      <form action="http://localhost:8080/update_staff" method="post">
+        <table>
+
+            <tr>
+                <td><label for="fname">Staff ID:</label></td>
+                <td><input type="text" name="sid" placeholder="Ex: 2xxx"></td>
+            </tr>
+
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" name="fname" placeholder="First Name..."></td>
+            </tr>
+            <tr>
+                <td><label for="lname">New Password:</label></td>
+                <td><input type="password" name="pass1" placeholder="New password"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Confirm password:</label></td>
+                <td><input type="password" name="pass2" placeholder="Confirm Password"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="UPDATE" class="submit_btn"></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <br>
+    <ul></ul>
+    <br>
+
+  <!-------------------------------------------------------staudent update form--->  
+
+      <h1 class="form_title" id="section2"><b>Update Student Account</b></h1>
+
+      <form action="http://localhost:8080/stu_update" method="post">
+        <table>
+
+            <tr>
+                <td><label for="id">Studnet ID:</label></td>
+                <td><input type="text" name="id" placeholder="Ex: 3xxx"></td>
+            </tr>
+
+            <tr>
+                <td><label for="id">Email:</label></td>
+                <td><input type="text" name="mail" placeholder="Example@gmail.com"></td>
+            </tr>
+    
+            <tr>
+                <td><label for="lname">New Password:</label></td>
+                <td><input type="password" name="pass1" placeholder="New password"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Confirm password:</label></td>
+                <td><input type="password" name="pass2" placeholder="Confirm Password"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="UPDATE"></td>
+            </tr>
+        </table>
+    </form>
+
+    <br><br>
+
+    <!----------------------------------------------------------delete student-->
+
+    <h1 class="form_title"><b>Removing Accounts</b></h1>
+
+      <form action="http://localhost:8080/delete_stu" method="post">
+        <table>
+            <tr>
+                <td><label for="id">Student ID:</label></td>
+                <td><input type="text" name="id" placeholder="3xxx"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="REMOVE"></td>
+            </tr>
+        </table>
+    </form>
+<br><br>
+
+<!-----------------------------------------------------adding books-->
+
+<h1 class="form_title" id="section3"><b>Add New Books</b></h1>
+
+<form action="http://localhost:8080/add_book" method="post">
+    <table>
+<tr>
+    <td><label for="id">Book ID:</label></td>
+    <td><input type="text" name="bookid" placeholder="Ex: 4xxx"></td>
+</tr>
+
+<tr>
+    <td><label for="id">Book Name:</label></td>
+    <td><input type="text" name="bookname" placeholder="Harry Potter"></td>
+</tr>
+
+<tr>
+    <td><label for="id">Book Authors:</label></td>
+    <td><input type="text" name="author" placeholder="cameron black"></td>
+</tr>
+
+<tr>
+    <td><label for="date">Add Date:</label></td>
+    <td><input type="date" name="bookDate"></td>
+</tr>
+
+<tr>
+    <td><label for="type">Book type:</label></td>
+    <td>
+        <select name="btype">
+            <option value="history_books">History and Cultural Books</option>
+            <option value="science_books">Science and Nature Books</option>
+            <option value="art_books">Art and Photography Books</option>
+            <option value="tech_books">Technology books</option>
+            <option value="math_books">Mathematics books</option>
+            <option value="commerce_books">Commerce books</option>
+            <option value="other_books">Other</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td><label for="date">Book Cover Image:</label></td>
+    <td><input type="text" name="imag" placeholder="Ex: https://www.google.com/images"></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td><input type="submit" value="ADD"></td>
+</tr>
+
+</table>
+</form>
+
+<br><br>
+<!----------------------------------------------------------------------------delete book-->
+
+<h1 class="form_title" id="section4"><b>Remove Book</b></h1>
+
+<form action="http://localhost:8080/delete_book" method="post">
+  <table>
+      <tr>
+          <td><label for="id">Book ID:</label></td>
+          <td><input type="text" name="bid" placeholder="4xxx"></td>
+      </tr>
+
+      <tr>
+        <td><label for="type">Book type:</label></td>
+        <td>
+            <select name="btype">
+                <option value="history_books">History and Cultural Books</option>
+                <option value="science_books">Science and Nature Books</option>
+                <option value="art_books">Art and Photography Books</option>
+                <option value="tech_books">Technology books</option>
+                <option value="math_books">Mathematics books</option>
+                <option value="commerce_books">Commerce books</option>
+                <option value="other_books">Other</option>
+            </select>
+        </td>
+    </tr>
+
+      <tr>
+          <td></td>
+          <td><input type="submit" value="REMOVE"></td>
+      </tr>
+  </table>
+</form>
+<br><br>
+
+
+</div></div>
+
+        
+      <div class="section" id="section4">
+        <div id="stu_display">Click on Studnet Deatils to see more...</div>
+      </div>
+        
+
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-logo"><b>UNI-LIB</b> </div>
+          <div class="footer-text">
+
+
+            <p class="footerparts">Contact: <a href="#">1234567890</a></p>
+            <p class="footerparts">Email: <a href="#">TestEmail@gmail.com</a></p>
+            <p class="footerparts">Fax: <a href="#">TestEmail@gmail.com</a></p>
+            <p class="footerparts">Address: <a href="#">abc123</a></p>
+          
+
+          </div>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+    
+    <script src="/js/script.js"></script>
+    <script src="/js/LandJS.js"> </script>
+
+</body>
+</html>
